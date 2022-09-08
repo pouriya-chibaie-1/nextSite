@@ -1,0 +1,52 @@
+@import url(./font/font.css);
+.container{
+    font-family: Vazir;
+    width: 100vw;
+    height: 100vh;
+}
+.header{
+width: 100vw;
+height: 45vh;
+background-color: aqua;
+}
+.content{ position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 55vh;
+}
+.divInContent{position: absolute;
+    display: flex;
+    top: -30%;
+    width: 80vw;
+    height: 50vh;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+}
+.left{
+    width: 55%;
+    height: 100%;
+    background: white;
+}
+.right{
+
+    width: 45%;
+    height: 100%;
+    background: #29A042;
+}
+.submitBtn{
+    width: 200px;
+    height: 47px;
+    border-radius: 30px;
+    border-color: transparent;
+    background: rgb(9,126,197);
+    background: linear-gradient(90deg, rgba(9,126,197,1) 0%, rgba(1,155,215,1) 61%, rgba(0,184,231,1) 100%);
+}
+.left h1{
+    color: #349CCF;
+}
+.textField{text-align: center !important;
+    font-family: Vazir !important;
+}
