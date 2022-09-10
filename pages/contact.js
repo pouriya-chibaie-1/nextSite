@@ -1,6 +1,11 @@
 import style from '../styles/contact.module.scss'
 import TextField from '@mui/material/TextField';
 import { makeStyles } from '@mui/styles';
+import Image from 'next/image';
+import PlaceIcon from '@mui/icons-material/Place';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon } from '@mui/material';
 const useStyles = makeStyles({
   root: {
     "& .MuiInputBase-input": { fontFamily: "Vazir", color: "black", fontSize: "13px",position:"relative" },
@@ -32,13 +37,17 @@ const ContactUs = () => {
               <TextField className={classes.root} style={{width:"45%"}}label="شماره تماس"  variant="standard"/>
             </div>
             <div className={style.divContainInput}>
-              <TextField className={classes.root}style={{width:"45%"}} label="ایمیل"ص variant="standard"/>
+              <TextField className={classes.root}style={{width:"45%"}} label="ایمیل" variant="standard"/>
               <TextField className={classes.root} style={{width:"45%"}}label="موضوع" variant="standard"/>
             </div>
             <div className={style.divTextArea}><TextField variant="standard" rows={2} className={classes.root} fullWidth label="موضوع"multiline /></div>
             <button className={style.submitBtn}>ارسال پیام</button>
           </div>
-          <div className={style.right}></div>
+          <div className={style.right}>
+            <div> <span>اطلاعات تماس </span><span >موقعیت نقشه</span> </div>
+          </div>
+         <PlaceIcon/>
+
         </div>
 
       </div>

@@ -9,7 +9,7 @@
 .header{
 width: 100vw;
 height: 45vh;
-background: url('../public/bp-conversation3.jpg') no-repeat  ;
+background: url('../public/header.png') no-repeat  ;
 background-size: cover;
 }
 .content{ position: relative;
@@ -40,7 +40,10 @@ background-size: cover;
 
     width: 45%;
     height: 100%;
-    background: #29A042;
+    background: rgb(14,94,158);
+    background: linear-gradient(45deg, rgba(14,94,158,1) 21%, rgba(33,163,146,1) 56%, rgba(56,158,40,1) 100%);
+    display: flex;
+    flex-direction: column;
 }
 .submitBtn{
     width: 200px;
