@@ -1,14 +1,18 @@
 import style from '../styles/contact.module.scss'
 import TextField from '@mui/material/TextField';
 import { makeStyles } from '@mui/styles';
-
 const useStyles = makeStyles({
   root: {
     "& .MuiInputBase-input": { fontFamily: "Vazir", color: "black", fontSize: "13px",position:"relative" },
-    "& .MuiFormLabel-root": { fontFamily: "Vazir", fontSize: "13px", width:"100%"},
-    "& label.Mui-focused":{position: "absolute",right: "-25%",textAlign:"right",width:"100%"}
+    "& .MuiFormLabel-root": { fontFamily: "Vazir", fontSize: "13px", width:"100%",},
+    "& label.Mui-focused":{textAlign:"right",width:"100%"},
+    "& label": {
+      transformOrigin: "top right",
+      right: 0,
+    }
   }
 });
+
 const ContactUs = () => {
   const classes = useStyles();
 
