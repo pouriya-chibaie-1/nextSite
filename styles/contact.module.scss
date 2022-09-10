@@ -1,5 +1,7 @@
 @import url(./font/font.css);
+@import "mixins.scss";
 .container{
+
     font-family: Vazir;
     width: 100vw;
     height: 100vh;
@@ -7,7 +9,8 @@
 .header{
 width: 100vw;
 height: 45vh;
-background-color: aqua;
+background: url('../public/bp-conversation3.jpg') no-repeat  ;
+background-size: cover;
 }
 .content{ position: relative;
     display: flex;
@@ -19,13 +22,16 @@ background-color: aqua;
 .divInContent{position: absolute;
     display: flex;
     top: -30%;
-    width: 80vw;
+    width: 70vw;
     height: 50vh;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 
 }
-.left{
+.left{direction: rtl;   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
     width: 55%;
     height: 100%;
     background: white;
@@ -39,14 +45,31 @@ background-color: aqua;
 .submitBtn{
     width: 200px;
     height: 47px;
+    font-family: 'Vazir';
     border-radius: 30px;
     border-color: transparent;
     background: rgb(9,126,197);
     background: linear-gradient(90deg, rgba(9,126,197,1) 0%, rgba(1,155,215,1) 61%, rgba(0,184,231,1) 100%);
+    margin: auto;
+    color:white;
 }
-.left h1{
+.left h1{text-align: center;
     color: #349CCF;
 }
 .textField{text-align: center !important;
     font-family: Vazir !important;
+}
+.divOpacity{
+width: 100%;
+height: 100%;
+background-color: #26A2D6;
+opacity: 0.8;
+}
+.divContainInput{
+display: flex;
+justify-content: space-around;
+}
+.divTextArea{
+    width: 96%;
+    margin: auto;
 }
