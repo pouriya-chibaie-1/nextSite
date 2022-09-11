@@ -25,7 +25,6 @@ background-size: cover;
     width: 70vw;
     height: 50vh;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 
 }
 .left{direction: rtl;   
@@ -37,13 +36,17 @@ background-size: cover;
     background: white;
 }
 .right{
-
+direction: rtl;
     width: 45%;
     height: 100%;
-    background: rgb(14,94,158);
-    background: linear-gradient(45deg, rgba(14,94,158,1) 21%, rgba(33,163,146,1) 56%, rgba(56,158,40,1) 100%);
-    display: flex;
-    flex-direction: column;
+    background: rgb(14,165,120);
+    background: -moz-linear-gradient(45deg, rgba(14,165,120,1) 21%, rgba(32,163,85,1) 56%, rgba(56,158,40,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(14,165,120,1) 21%, rgba(32,163,85,1) 56%, rgba(56,158,40,1) 100%);
+    background: linear-gradient(45deg, rgba(14,165,120,1) 21%, rgba(32,163,85,1) 56%, rgba(56,158,40,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0ea578",endColorstr="#389e28",GradientType=1);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .submitBtn{
     width: 200px;
@@ -76,3 +79,60 @@ justify-content: space-around;
     width: 96%;
     margin: auto;
 }
+.divIconRight{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.divIconRight img{
+   width: 35px;
+   height: 35px;
+}
+.divIconRight h4{
+    font-weight: 300 ;
+    margin-right: 10px;
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+.socialMediaDiv{
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+}
+@media screen and (max-width: 800px) {
+    .header{
+        display: none;
+    }
+   .divInContent{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 100vh;
+    .left{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+    .right{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+    .divIconRight h4{
+        font-size: 18px;
+
+    }
+    .divContainInput{
+display: grid;
+grid-template-columns: 1;
+    }
+    .inputContact{
+        width: 70vw;
+    }
+    .divTextArea{
+        width: 70vw; 
+    }
+   }
+  }
