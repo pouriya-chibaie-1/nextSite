@@ -6,6 +6,9 @@
     width: 100vw;
     height: 100vh;
 }
+.inputContact{
+    width: 45%;
+}
 .header{
 width: 100vw;
 height: 45vh;
@@ -34,6 +37,9 @@ background-size: cover;
     width: 55%;
     height: 100%;
     background: white;
+}
+.divContainInput{
+    height: 100px;
 }
 .right{
 direction: rtl;
@@ -100,6 +106,9 @@ justify-content: space-around;
     display: flex;
     justify-content: space-around !important;
     align-items: center;
+}
+.validateError{
+    color: red;
 }
 @media screen and (max-width: 800px) {
     .header{

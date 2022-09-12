@@ -1,5 +1,25 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+const nodemailer=require('nodemailer')
+let transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
+  requireTLS: true,
+  auth: {
+      user: 'your.gmail.account@gmail.com',
+      pass: 'your.password'
+  }
+});
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
-}
+let mailOptions = {
+  from: 'your.gmail.account@gmail.com',
+  to: 'receivers.email@domain.example',
+  subject: 'Test',
+  text: 'Hello World!'
+};
+
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+      return console.log(error.message);
+  }
+  console.log('success');
+});
