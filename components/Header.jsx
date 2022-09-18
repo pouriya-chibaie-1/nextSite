@@ -15,23 +15,11 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { makeStyles } from '@mui/styles'
 import {  useRouter } from 'next/router';
-// const useStyles = makeStyles({
-//   root: {
-//     "& .MuiButtonBase-root":{fontFamily:"Vazir"},
-//     "& .MuiTypography-root":{fontFamily:"Vazir"}
-//   }
-// });
-
-
-
-
-
-//MuiButtonBase-root
+ 
 const drawerWidth = 240;
 const navItems = [{name:"خانه",location:"/"},{name:"درباره ما",location:"/about"}, {name:"تماس با ما",location:"/contact"}];
 
 function Header(props) {
-  // const style=useStyles()
   const router= useRouter()
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);

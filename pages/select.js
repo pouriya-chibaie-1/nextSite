@@ -178,8 +178,7 @@ export default function Select() {
           </div>
         </SwipeableDrawer>
         </ThemeProvider>
-      <div style={{ marginTop: "40px" }}>
-      </div>
+      
     </div>
   );
 }
