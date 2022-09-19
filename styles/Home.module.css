@@ -163,3 +163,15 @@ flex-direction: column;
 justify-content: space-between;
 align-items: center;
 }
+.homeSider{
+margin: 30px auto;
+  width: 70%;
+  height:350px;
+  }
+@media only screen and (max-width: 500px) {
+
+  .homeSider{
+  width: 90%;
+  height:250px;
+  }
+}

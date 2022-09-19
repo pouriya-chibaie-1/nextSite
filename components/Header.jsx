@@ -17,7 +17,7 @@ import { makeStyles } from '@mui/styles'
 import {  useRouter } from 'next/router';
  
 const drawerWidth = 240;
-const navItems = [{name:"خانه",location:"/"},{name:"درباره ما",location:"/about"}, {name:"تماس با ما",location:"/contact"}];
+const navItems = [{name:"خانه",location:"/"},{name:"درباره ما",location:"/about"}, {name:"تماس با ما",location:"/contact"},, {name:"ورود / ثبت نام",location:"/login"}];
 
 function Header(props) {
   const router= useRouter()
