@@ -40,7 +40,8 @@ export const buttonFormStyle = {
     height: "45px",
     color: "white",
     borderRadius: "5px",
-    marginBottom: "20px",
+    borderColor:"transparent",
+    margin: "40px 0px",
 };
 export const checkDivStyle = {
     width: "80%",
@@ -56,6 +57,6 @@ export const titleForm = {
 }
 export const pushToLogOrReg = {
     color: "#3F3F3F",
-    fontFamily: "Poppins",
+    fontFamily: "Vazir",
     cursor: "pointer"
 }

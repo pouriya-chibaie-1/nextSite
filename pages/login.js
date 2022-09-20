@@ -65,6 +65,8 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0} >
        <AuthLogin/>
+    
+
       </TabPanel>
       <TabPanel value={value} index={1} >
        <AuthRegister/>

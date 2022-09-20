@@ -166,12 +166,11 @@ align-items: center;
 .homeSider{
 margin: 30px auto;
   width: 70%;
-  height:350px;
+   height:  calc(width / 1000 * 500);
   }
 @media only screen and (max-width: 500px) {
 
   .homeSider{
   width: 90%;
-  height:250px;
   }
 }

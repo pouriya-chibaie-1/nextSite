@@ -19,6 +19,9 @@ const  App  = () => {
  loop={true}
  pagination={{ clickable: true,}}
  navigation={true}
+ style={{width:"70%",height:"calc(70vw / 1000 * 500)","@media (max-width: 500px)":{ ".homeSider":{
+  width: "90%"
+  }}}}
  className={`mySwiper ${styles.homeSider}`}
  slidesPerView={1}
  modules={[Pagination, Navigation]}

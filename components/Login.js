@@ -4,45 +4,46 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import {LoginBox,checkDivStyle,buttonFormStyle,divContainer,divContainerFlex,inputStyle,pushToLogOrReg,titleForm} from "./LoginStyle"
 import { FormControl, IconButton, Input, InputAdornment, InputLabel, TextField } from '@mui/material';
-// const useStyles = makeStyles({
-//   root: {
-//     "& .MuiInputBase-input": { fontFamily: "Vazir ", color: "black", fontSize: "13px", position: "relative" },
-//     "& .MuiFormLabel-root": { fontFamily: "Vazir ", fontSize: "13px", width: "100%", },
-//     "& label.Mui-focused": { fontFamily: "Vazir ", textAlign: "right", width: "100%" },
-//     "& label": {
-//       transformOrigin: "top right",
-//       right: 0,
-//     }
-//   }
-// });
+import { makeStyles } from '@mui/styles';
+const useStyles = makeStyles({
+  root: {
+    "& .MuiInputBase-input": { fontFamily: "Vazir ", color: "black", fontSize: "13px", position: "relative" },
+    "& .MuiFormLabel-root": { fontFamily: "Vazir ", fontSize: "13px", width: "100%", },
+    "& label.Mui-focused": { fontFamily: "Vazir ", textAlign: "right", width: "100%" },
+    "& .MuiInputLabel-root":{fontFamily: "Vazir ", textAlign: "right", width: "100%"},
+    "& .MuiFormControl-root":{fontFamily: "Vazir ", textAlign: "right", width: "100%"},
+    "& label": {
+      transformOrigin: "top right",
+      right: 0,
+    }
+  }
+});
 const  AuthLogin = () => {
     const [showPassword, setShowPassword] = useState(false);
       const handleClickShowPassword = () => {
  setShowPassword(!showPassword)
   };
-    // const muiStyles=useStyles()
+  const regExp = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
+
+    const muiStyles=useStyles()
   return ( <>
        
         <div
-          style={LoginBox}
-          className="w-80 h-108 mobile:w-full mobile:h-full"
-        >
+          style={LoginBox}    >
           <h1 style={titleForm}>ورود</h1>
           <Formik 
-       initialValues={{ email: '', password: '' }}
+       initialValues={{ phoneNumber: '', password: '' }}
        validate={values => {
          const errors = {};
-         if (!values.email) {
-           errors.email = 'Required';
+         if (!values.phoneNumber) {
+           errors.phoneNumber = 'اجباری';
          }
-         if (!values.password) {
-           errors.password = 'Required';
-         }
-          else if (
-           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-         ) {
-           errors.email = 'Invalid email address';
-         }
+         else if (values.phoneNumber.match(regExp))  {
+             errors.phoneNumber = 'Invalid phoneNumber address';
+            }
+            if (!values.password) {
+              errors.password = 'اجباری';
+            }
          return errors;
        }}
        onSubmit={(values, { setSubmitting }) => { }   }
@@ -60,13 +61,18 @@ const  AuthLogin = () => {
          <form onSubmit={handleSubmit} style={{width:"100%" ,display:"flex",alignItems:"center",flexDirection:"column",fontFamily:"Vazir"}}>
          
          {/* className={muiStyles.root} */}
-           <TextField   variant='standard' label="ایمیل" sx={{width:"70%",margin:"30px 0px",fontFamily:"Vazir"}}/>
-           {<span style={{color:"red"}}>{errors.email && touched.email && errors.email}</span>}
+           <TextField  className={`${muiStyles.root}`}  variant='standard'
+            label="شماره موبایل" sx={{width:"70%",margin:"30px 0px",fontFamily:"Vazir",textAlign:"right"}}
+            value={values.phoneNumber} 
+            onChange={handleChange('phoneNumber')}
+            />
+           {<span style={{color:"red"}}>{errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}</span>}
          
-         <FormControl sx={{width:"70%",margin:"30px 0px"}}>
+         <FormControl sx={{width:"70%",margin:"30px 0px" ,direction:"rtl"}}>
 
-         <InputLabel  htmlFor="standard-adornment-password">Password</InputLabel>
+         <InputLabel sx={{width:"100%",fontFamily:"Vazir",width:"100vw",textAlign:"right"}} className={`${muiStyles.root}`}   htmlFor="standard-adornment-password">رمز عبور</InputLabel>
           <Input 
+          className={`${muiStyles.root}`}
             id="standard-adornment-password"
             type={showPassword ? 'text' : 'password'}
             value={values.password}
@@ -77,7 +83,7 @@ const  AuthLogin = () => {
                   aria-label="toggle password visibility"
                   onClick={handleClickShowPassword}
                 >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
               </InputAdornment>
             }
@@ -95,10 +101,7 @@ const  AuthLogin = () => {
          
           
           
-          <h4 onClick={"pushToRegister"} style={pushToLogOrReg}>
-            Not a member? Sign up now
-          </h4>
-
+         
           {/* <button style={buttonFormStyle} onClick={pushToRegister}>REGISTER</button> */}
         </div>
      
