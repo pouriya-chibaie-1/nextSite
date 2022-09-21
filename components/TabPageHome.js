@@ -53,7 +53,7 @@ export default function BasicTabs() {
   allowScrollButtonsMobile aria-label="basic tabs example" sx={{"& .MuiTabs-flexContainer":{ justifyContent:"center"
   }}} >
 
-          <Tab sx={{fontFamily:"Vazir",fontSize:"12px",}} label="خدمات تفریحی" {...a11yProps(0)} />
+          <Tab sx={{fontFamily:"Vazir"    ,fontSize:"12px",}} label="خدمات تفریحی" {...a11yProps(0)} />
           <Tab sx={{fontFamily:"Vazir",fontSize:"12px"}} label="خدمات ورزشی" {...a11yProps(1)} />
           <Tab sx={{fontFamily:"Vazir",fontSize:"12px"}} label="پارکینگ مجزا" {...a11yProps(2)} />
           <Tab sx={{fontFamily:"Vazir",fontSize:"12px"}} label="امتیاز گیری" {...a11yProps(3)} />
