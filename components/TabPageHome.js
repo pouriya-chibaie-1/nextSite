@@ -6,7 +6,6 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import styles from "../styles/tab.module.scss"
-import { Suspense } from 'react';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -51,9 +50,10 @@ export default function BasicTabs() {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange}  variant="scrollable"scrollButtons
-  allowScrollButtonsMobile aria-label="basic tabs example" >
+  allowScrollButtonsMobile aria-label="basic tabs example" sx={{"& .MuiTabs-flexContainer":{ justifyContent:"center"
+  }}} >
 
-          <Tab sx={{fontFamily:"Vazir",fontSize:"12px"}} label="خدمات تفریحی" {...a11yProps(0)} />
+          <Tab sx={{fontFamily:"Vazir",fontSize:"12px",}} label="خدمات تفریحی" {...a11yProps(0)} />
           <Tab sx={{fontFamily:"Vazir",fontSize:"12px"}} label="خدمات ورزشی" {...a11yProps(1)} />
           <Tab sx={{fontFamily:"Vazir",fontSize:"12px"}} label="پارکینگ مجزا" {...a11yProps(2)} />
           <Tab sx={{fontFamily:"Vazir",fontSize:"12px"}} label="امتیاز گیری" {...a11yProps(3)} />
@@ -75,7 +75,7 @@ export default function BasicTabs() {
         Item Three
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Three
+        Item Four
       </TabPanel>
     </Box>
   );
