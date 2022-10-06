@@ -155,6 +155,17 @@ align-items: center;
   align-items: center;
   justify-content: center;
 }
+.divContentGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.gridItem{margin: auto;
+width: 98%;
+height:29vw;
+background-color: #0070f3;
+border-radius: 28px;
+}
 .contentIcon{
 width: 100%;
 height: 60%;
@@ -164,12 +175,17 @@ justify-content: space-between;
 align-items: center;
 }
 .homeSider{
-margin: 30px auto;
+margin: 0px 0px 30px 0px;
   width: 70%;
    height:  calc(width / 1000 * 500);
   }
 @media only screen and (max-width: 500px) {
-
+  .gridItem{
+    height: 59vw;
+  }
+  .divContentGrid{
+    grid-template-columns: 1fr;
+  }
   .homeSider{
   width: 90%;
   }

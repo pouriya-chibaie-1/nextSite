@@ -17,7 +17,6 @@ const useStyles = makeStyles({
 });
 const AuthRegister = () => {
     useEffect(()=>{
-        // axios.get()
     })
     const style = useStyles()
     return (<>
