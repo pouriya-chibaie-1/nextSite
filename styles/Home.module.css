@@ -177,12 +177,12 @@ align-items: center;
 .homeSider{
 margin: 0px 0px 30px 0px;
   width: 70%;
-   height:  calc(width / 1000 * 500);
   }
 @media only screen and (max-width: 500px) {
   .gridItem{
     height: 59vw;
   }
+  
   .divContentGrid{
     grid-template-columns: 1fr;
   }
