@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import dynamic from 'next/dynamic';
 import useDeviceSize from '../components/useDeviceSize';
 import { useState } from 'react';
+import Image from 'next/image';
 const App = () => {
   const [sliderPerView,setSliderPerView] = useState(1);
   const s = useDeviceSize()
@@ -35,14 +36,14 @@ if(s[0]<=500){
       spaceBetween={0}
       loop={true}
       pagination={{ clickable: true, }}
-      navigation={true}
+      navigation={true} 
       style={{ width: "100%", height: "31.5vw" }}
       className={`${styles.homeSider}`}
       slidesPerView={1}
       modules={[Pagination, Navigation]}
 
     >
-      <SwiperSlide style={{ background: "red"}}>Slide 1</SwiperSlide>
+      <SwiperSlide ><Image src={`/image/slider1.jpg`} layout="fill" /></SwiperSlide>
       <SwiperSlide style={{ background: "aqua" }}>Slide 2</SwiperSlide>
       <SwiperSlide style={{ background: "green" }}>Slide 3</SwiperSlide>
       <SwiperSlide style={{ background: "blue" }}>Slide 4</SwiperSlide>
@@ -78,3 +79,42 @@ if(s[0]<=500){
 
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
