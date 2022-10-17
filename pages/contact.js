@@ -117,10 +117,10 @@ const ContactUs = () => {
           </div>
           <div className={style.right}>
             <div className={style.divIconRight}><h2 >اطلاعات تماس</h2> <h2>نقشه موقعیت</h2></div>
-            <div className={style.divIconRight}><img src="/call.svg" /><h4 >  <a href="tel:+989382960927">09382960927</a></h4>  </div>
-            <div className={style.divIconRight}><img src='/location.svg' /><h4 >تهران شهر قدس خیابان سرقنات پاساژ<br /> میلاد واحد 84</h4></div>
-            <div className={style.divIconRight}><img src='/mail.svg' /><h4 ><a href="mailto:pouriya.chibaie.dev@gmail.com">pouriya.chibaie.dev@gmail.com</a></h4></div>
-            <div className={style.divIconRight}><img src='/web.svg' /><h4 ><a href="https:ekaseb.com">www.ekaseb.com</a></h4></div>
+            <div className={style.divIconRight}><Image src="/call.svg"  width={40} height={40}/><h4 >  <a href="tel:+989382960927">09382960927</a></h4>  </div>
+            <div className={style.divIconRight}><Image src='/location.svg' width={40} height={40} /><h4 >تهران شهر قدس خیابان سرقنات پاساژ<br /> میلاد واحد 84</h4></div>
+            <div className={style.divIconRight}><Image src='/mail.svg' width={40} height={40} /><h4 ><a href="mailto:pouriya.chibaie.dev@gmail.com">pouriya.chibaie.dev@gmail.com</a></h4></div>
+            <div className={style.divIconRight}><Image src='/web.svg' width={40} height={40} /><h4 ><a href="https:ekaseb.com">www.ekaseb.com</a></h4></div>
             <div className={style.socialMediaDiv}>
               <Image src='/whatsapp.svg' width={35} height={35} />
               <Image src='/instagram.svg' width={35} height={35} />

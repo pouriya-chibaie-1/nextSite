@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/footer.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 const Footer = () => {
     const style1 = { textAlign: "right", display: "flex", flexDirection: "column" }
         ;
@@ -27,7 +28,7 @@ const Footer = () => {
                     <Link href={`/c`} ><a className={styles.linkStyle}>پست الکترونیکی:pouriya.chibaie.dev@gmail.com</a></Link>
                 </div>
                 <div className={styles.footerSection}>
-                    <img src='/milladmap.png' style={{width:"200px",height:"200px"}} />
+                    <Image src='/milladmap.png' width={200} height={200} />
                 </div>
             </div>
             <div>

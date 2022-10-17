@@ -6,6 +6,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import styles from "../styles/tab.module.scss"
+import Image from 'next/image';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -62,10 +63,10 @@ export default function BasicTabs() {
       <TabPanel value={value} index={0}>
         <div className={styles.facility}>
 
-          <div className={styles.facilityImage}><div className={styles.facilityImageOverlay}></div><img src={`/camera/billyard.jpg`} style={{ width: '100%', height: '100%' }} /></div>
-          <div className={styles.facilityImage}><div className={styles.facilityImageOverlay}></div><img src={`/camera/footballdasti.jpg`} style={{ width: '100%', height: '100%' }} /></div>
-          <div className={styles.facilityImage}><div className={styles.facilityImageOverlay}></div><img src={`/camera/gamenet.jpg`} style={{ width: '100%', height: '100%' }} /></div>
-          <div className={styles.facilityImage}><div className={styles.facilityImageOverlay}></div><img src={`/camera/hockey.jpg`} style={{ width: '100%', height: '100%' }} /></div>
+          <div className={styles.facilityImage}><div className={styles.facilityImageOverlay}></div><Image src={`/camera/billyard.jpg`} fill /></div>
+          <div className={styles.facilityImage}><div className={styles.facilityImageOverlay}></div><Image src={`/camera/footballdasti.jpg`} fill /></div>
+          <div className={styles.facilityImage}><div className={styles.facilityImageOverlay}></div><Image src={`/camera/gamenet.jpg`} fill /></div>
+          <div className={styles.facilityImage}><div className={styles.facilityImageOverlay}></div><Image src={`/camera/hockey.jpg`} fill /></div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

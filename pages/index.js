@@ -41,7 +41,7 @@ if(s[0]<=500){
       className={`${styles.homeSider}`}
       slidesPerView={1}
       modules={[Pagination, Navigation]}
-
+ 
     >
       <SwiperSlide ><Image src={`/image/slider1.jpg`} layout="fill" /></SwiperSlide>
       <SwiperSlide style={{ background: "aqua" }}>Slide 2</SwiperSlide>
